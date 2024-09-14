@@ -1,0 +1,264 @@
+* {
+  --color-gray: #CCCCCC;
+  --color-dark-gray: #808080;
+  --color-light-black: #555555;
+  --color-dark-black: #333333;
+  --color-orange: #FF5722;
+  --color-blue: #1E88E5;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header.Header {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  width: 97%;
+  max-height: 65px;
+  min-height: 50px;
+  margin: 10px auto;
+  border-radius: 48px;
+  border: 1px solid var(--color-gray);
+}
+header.Header .Search-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 65px;
+  width: 55px;
+  min-height: 45px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background: none;
+  border: 2px solid var(--color-dark-gray);
+  transition: 200ms;
+}
+header.Header .Search-btn .search-icon {
+  color: var(--color-dark-gray);
+}
+
+header.Header .Search-btn:hover {
+  border: 2px solid var(--color-orange);
+}
+header.Header .Search-btn:hover .search-icon{
+  color: var(--color-orange);
+}
+
+header.Header .Search-btn:active{
+  background-color: var(--color-orange);
+}
+header.Header .Search-btn:active .search-icon{
+  color: white;
+}
+
+header.Header .Search-input{
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  font-size: 20px;
+  width: 550px;
+  min-height: 45px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background: none;
+  outline: none;
+  color: var(--color-orange);
+  border: 1px solid var(--color-gray);
+}
+
+header.Header .Search-input::placeholder{
+  color: var(--color-dark-gray);
+}
+header.Header .Search-input:focus{
+  outline: 2px solid var(--color-orange);
+}
+
+
+
+
+
+header.Header .ShowForum-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  min-height: 45px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background: none;
+  border: 2px solid var(--color-dark-gray);
+  transition: 200ms;
+  margin-left: auto;
+}
+header.Header .ShowForum-btn .ShowForum-icon {
+  color: var(--color-dark-gray);
+  transition: color 200ms; 
+}
+
+header.Header .ShowForum-btn:hover {
+  width: 150px; 
+  border: 2px solid var(--color-orange);
+}
+header.Header .ShowForum-btn:hover .ShowForum-icon {
+  color: var(--color-orange);
+}
+header.Header .ShowForum-btn span {
+  display: none;
+  transform: translateX(-100%); 
+  padding: 0px 10px;
+  color: var(--color-orange);
+  font-size: 18px;
+}
+header.Header .ShowForum-btn:hover span {
+  display: block; 
+  transform: translateX(0); 
+}
+
+header.Header .ShowForum-btn:active{
+  background-color: var(--color-orange);
+}
+header.Header .ShowForum-btn:active span{
+  color: white;
+}header.Header .ShowForum-btn:active .ShowForum-icon{
+  color: white;
+}
+
+
+
+
+
+footer.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--color-gray);
+  height: 60px;
+  width: 100%;
+}
+footer.footer span{
+  color: var(--color-dark-gray);
+  font-size: 18px;
+  margin-left: 10px;
+}
+footer.footer span a{
+  color: var(--color-light-black);
+}
+
+
+
+
+
+main.main{
+  width: 90%;
+  margin: 50px auto;
+}
+main.main .post-card{
+  margin-top: 25px;
+  width: 100%;
+  border: 1px solid var(--color-gray);
+  border-radius: 16px;
+}
+main.main .post-card .header-post{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  height: 65px;
+  width: 100%;
+  border-bottom: 1px solid var(--color-gray);
+}
+main.main .post-card .header-post .user-info{
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+main.main .post-card .header-post .user-info img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+}
+main.main .post-card .header-post .user-info h2{
+  color: var(--color-light-black);
+  font-weight: 600;
+  font-size: 25px;
+  margin-left: 15px;
+}
+main.main .post-card .header-post .btns-post{
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
+}
+main.main .post-card .header-post .btns-post button{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  min-height: 45px;
+  box-sizing: border-box;
+  border-radius: 24px;
+  background: none;
+  border: 2px solid var(--color-dark-gray);
+  transition: 200ms;
+  margin-left: auto;
+}
+main.main .post-card .header-post .btns-post .btns-post-icon {
+  color: var(--color-dark-gray);
+  transition: color 200ms; 
+}
+main.main .post-card .header-post .btns-post button:hover {
+  width: 150px; 
+  border: 2px solid var(--color-orange);
+}
+main.main .post-card .header-post .btns-post button:hover .btns-post-icon {
+  color: var(--color-orange);
+}
+main.main .post-card .header-post .btns-post button span {
+  display: none;
+  padding: 0px 10px;
+  color: var(--color-orange);
+  font-size: 18px;
+}
+main.main .post-card .header-post .btns-post button:hover span {
+  display: block; 
+}
+
+main.main .post-card .header-post .btns-post button:active{
+  background-color: var(--color-orange);
+}
+main.main .post-card .header-post .btns-post button:active span{
+  color: white;
+}
+main.main .post-card .header-post .btns-post button:active .btns-post-icon {
+  color: white;
+}
+
+
+
+
+main.main .post-card .post-cover{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  border-bottom: 1px solid var(--color-gray);
+}
+main.main .post-card .post-cover img{
+  width: calc(100% - 50px);
+  max-height: 325px;
+  border-radius: 16px;
+  padding: 0;
+  border: 0;
+  object-fit: cover;
+  object-position: center;
+}
+
+

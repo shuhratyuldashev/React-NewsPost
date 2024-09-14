@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es5",                           // Указывает на выходной уровень JavaScript
+    "lib": ["dom", "dom.iterable", "esnext"],  // Указывает, какие библиотеки включить
+    "allowJs": true,                          // Разрешает компиляцию JavaScript файлов
+    "skipLibCheck": true,                     // Пропускает проверку типов в библиотеках
+    "esModuleInterop": true,                  // Позволяет импортировать CommonJS модули
+    "allowSyntheticDefaultImports": true,     // Позволяет импортировать модули без default экспорта
+    "strict": true,                           // Включает строгий режим проверки типов
+    "forceConsistentCasingInFileNames": true, // Принудительное согласование регистра в именах файлов
+    "module": "commonjs",                     // Указывает на использование модуля CommonJS
+    "moduleResolution": "node",               // Использует Node.js для разрешения модулей
+    "resolveJsonModule": true,                // Позволяет импортировать JSON файлы
+    "isolatedModules": true,                  // Обеспечивает изоляцию модулей
+    "jsx": "react"                            // Указывает, что JSX будет использоваться в React
+  },
+  "include": ["src"],                        // Указывает, какие файлы следует включить
+  "exclude": ["node_modules", "build"]       // Указывает, какие файлы и директории следует исключить
+}

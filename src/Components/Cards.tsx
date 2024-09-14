@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card } from './Card'; // Убедитесь, что путь к файлу правильный
+import Card from './Card'; // Убедитесь, что путь к файлу правильный
 
 interface Post {
   id: number;

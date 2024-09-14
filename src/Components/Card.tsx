@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import { RiEditLine } from 'react-icons/ri';
 import { AiOutlineDelete } from 'react-icons/ai';
 
@@ -26,6 +26,13 @@ export class Card extends Component<CardProps> {
   render() {
     const { posts } = this.props;
     console.log('Posts in Card:', posts);
+
+  const [isValidUrl, setIsValidUrl] = useState(true); // Флаг для отслеживания валидности URL
+
+  const handleImageError = () => {
+    setIsValidUrl(false); // Если произошла ошибка загрузки, меняем флаг
+  };
+    
     return (
       <div>
         {posts.length === 0 ? <p>No posts available</p> : (
@@ -47,7 +54,7 @@ export class Card extends Component<CardProps> {
                   </button>
                 </div>
               </div>
-              <img src={post.postCover} alt={post.postTitle} />
+              {isValidUrl && <img src={post.postCover} alt={post.postTitle} onError={handleImageError} />}
               <h2>{post.postTitle}</h2>
               <h3>{post.postSubTitle}</h3>
               <p>{post.postContent}</p>
